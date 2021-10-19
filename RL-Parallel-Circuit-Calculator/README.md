@@ -1,4 +1,6 @@
-# RL Parallel Circuit Calculator 
+# Calculator for RL parallel circuit 
+
+The computer calculates the voltages, power, current, impedance and reactance for a parallels circuit of a resistor and a inductor.
 
 **Parallel Current**
 
