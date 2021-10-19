@@ -1,4 +1,4 @@
-﻿#ifndef RLSERIES
+#ifndef RLSERIES
 #define RLSERIES
 
 
@@ -11,7 +11,7 @@ class RLSeries
 {
 public:
 
-	void askUserTheHouseNumber(float inductance, float frequency, float resistance, float voltage);
+	void askUserTheInputValues(float inductance, float frequency, float resistance, float voltage);
 
 private:
 	int theHouseNumber;
@@ -19,7 +19,7 @@ private:
 
 
 //--------------------------------ask user to enter values for RL Circuit------------------------------
-inline void RLSeries  :: askUserTheHouseNumber (float inductance, float frequency, float resistance, float voltage)
+inline void RLSeries  :: askUserTheInputValues (float inductance, float frequency, float resistance, float voltage)
 {
 		cout << "Please input to use RL series circuit calculator.\n" 
 			 <<"\nInductance in Henry (H): " ;
