@@ -1,5 +1,5 @@
-#ifndef RLPARALELL
-#define RLPARALELL
+#ifndef RLPARALLEL
+#define RLPARALLEL
 
 
 #include <string.h>
@@ -7,21 +7,21 @@
 
 using namespace std;
 
-class RLParalell
+class RLParallel
 {
 public:
 
-	void askUserTheHouseNumber(float inductance, float frequency, float resistance, float voltage);
+	void askUserTheInputValues(float inductance, float frequency, float resistance, float voltage);
 
 private:
-	int theHouseNumber;
+	
 };
 
 
 //--------------------------------ask user to enter values for RL Circuit------------------------------
-inline void RLParalell  :: askUserTheHouseNumber (float inductance, float frequency, float resistance, float voltage)
+inline void RLParallel  :: askUserTheInputValues (float inductance, float frequency, float resistance, float voltage)
 {
-		cout << "Please input to use RL series circuit calculator.\n" 
+		cout << "Please input values to use RL Parallel circuit calculator.\n" 
 			 <<"\nInductance in Henry (H): " ;
 		cin >> inductance;
 		//cout << "Your inductance is:" << inductance <<"\n" << endl;
@@ -40,16 +40,26 @@ inline void RLParalell  :: askUserTheHouseNumber (float inductance, float freque
 
 		//--------------------calculate current for RL circuit------------------------
 		float XL = (2*3.141592654*frequency*inductance);
-		cout << "\nResistance XL: " << XL <<" ohms" << endl;
-		float Z = sqrt((resistance*resistance) +(XL*XL));
+		cout << "\n\n---------Resultat----------\n\nResistance XL: " << XL <<" ohms" << endl;
+		float Z = 1/(sqrt(     ((1/resistance)*(1/resistance))    +     ((1/XL)*(1/XL))       ));
 		cout << "\nImpedance Z: " << Z <<" ohms" << endl;
-		float current = voltage/Z ; 
-		cout << "\nCurrent I: " << current <<" A" << endl;
+		float IR = voltage/resistance ; 
+		cout << "\nCurrent in resistor IR: " << IR <<" A" << endl;
+		float IL = voltage/XL ; 
+		cout << "\nCurrent in indector IL: " << IL <<" A" << endl;
+		float IT= sqrt((IR*IR)+(IL*IL)); 
+		cout << "\nCurrent I: " << IT <<" A" << endl;
 
-		float apparentPower =  voltage * current;
+		float apparentPower =  voltage * IT;
 		cout << "\nApparent power S: " << apparentPower <<" W" << endl;
+
+		float realPower =  voltage * IR;
+		cout << "\nReal power P: " << realPower <<" W" << endl;
+
+		float reactivePower =  voltage * IL;
+		cout << "\nReactive power Q: " << reactivePower <<" W" << endl;
 		
-		float phase = atan(XL/resistance)*180/3.1415;
+		float phase = atan(resistance/XL)*180/3.1415;
 		cout << "\nPhase angle: " << phase <<" Degrees" << endl;
 		
 }
