@@ -14,15 +14,22 @@ public:
 	void askUserTheInputValues(float inductance, float frequency, float resistance, float voltage);
 
 private:
-	
+	int user;
 };
 
 
 //--------------------------------ask user to enter values for RL Circuit------------------------------
 inline void RLParallel  :: askUserTheInputValues (float inductance, float frequency, float resistance, float voltage)
 {
-		cout << "Please input values to use RL Parallel circuit calculator.\n" 
-			 <<"\nInductance in Henry (H): " ;
+		cout << "							RL Parallel circuit calculator							" << endl;
+
+		cout << "\nPlease choose the correct following options to use the calculator.\n" <<endl;
+
+		cout << "Enter values to find the total current(I) or current in inductor(IL).\nPress 1 for current(I) OR 2 for current in indoctor(IL) => " ;
+		cin >> user;
+		
+		if(user == 1){
+			cout	 <<"\nInductance in Henry (H): " ;
 		cin >> inductance;
 		//cout << "Your inductance is:" << inductance <<"\n" << endl;
 
@@ -61,6 +68,29 @@ inline void RLParallel  :: askUserTheInputValues (float inductance, float freque
 		
 		float phase = atan(resistance/XL)*180/3.1415;
 		cout << "\nPhase angle: " << phase <<" Degrees" << endl;
+		}
+
+		else {
+
+		cout	 <<"\nInductance in Henry (H): " ;
+		cin >> inductance;
+		//cout << "Your inductance is:" << inductance <<"\n" << endl;
+
+		cout << "Frequency in Hertz (Hz): " ;
+		cin >> frequency;
+		//cout << "Your frequency is:" << frequency <<"\n" << endl;
+
+		cout << "Resistance in ohms: " ;
+		cin >> resistance;
+		//cout << "Your resistance is:" << resistance <<"\n" << endl;
+
+		cout << "Voltage in volts (v): " ;
+		cin >> voltage;
+		//cout << "Your voltage is: " << voltage <<"\n" << endl;
+
+		}
+
+		
 		
 }
 
