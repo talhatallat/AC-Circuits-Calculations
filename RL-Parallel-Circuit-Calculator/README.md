@@ -1,8 +1,11 @@
-# Calculator for RL parallel circuit 
+<h1>Calculator for RL parallel circuit</h1>
 
-The computer calculates the voltages, power, current, impedance and reactance for a parallels circuit of a resistor and a inductor.
+The computer calculates the voltages, power, current, impedance and reactance for a parallel circuit of a resistor and a inductor.  
+Calcolator lets use find unkown values such as total current(I) or current in inductor(IL) or resistor value(R) and displayes reactance(XL), Impendance(z), current in resistor(IR), current in inductor(IL), Phase angle(0), apparent Power(S), real power(P), reactive Power(Q).
 
-**Parallel Current**
+
+
+<h3>Parallel Current Example</h3> 
 
 The supply across the terminals of this circuit is 300 V, 50 Hz.
 An ammeter is connected to the supply.
