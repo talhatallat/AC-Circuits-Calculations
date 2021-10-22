@@ -20,7 +20,7 @@ int main (void)
 	RLSeries myFirstRLSERIES;
 
 	cout << "" <<endl;
-	myFirstRLSERIES.askUserTheInputValues(0, 0, 0, 0);
+	myFirstRLSERIES.askUserTheInputValues(0, 0, 0, 0, 0);
 
 	//cout << " \nMain is ending\n" << endl;
 
