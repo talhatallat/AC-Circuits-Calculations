@@ -34,4 +34,15 @@ The program will help a user to find the inductance, L, in H.
 
 <h2>Finding Voltage across Resistor Example</h2>
 
+The supply across the terminals of this circuit is 490  V, 60  Hz.
+An ammeter is connected to the supply.
+
+The inductance L is 65 mH.
+The ammeter reading the supply current shows 8 A.  
+
+![image](https://user-images.githubusercontent.com/73076876/138531397-170d9ebe-07b2-45da-a457-0bafb37d0da4.png)
+
+Find the magnitude of the voltage across the resistance:
+
+VR  =  !!??  V.
 
